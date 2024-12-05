@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <h3> Geleceği Kodlayanlar arasına katıl</h3>
+    <p>Yazılım dünyasının liderlerinden biri olmak için gereken her şey burada. Programlama dillerini öğren, projeler geliştir, siber güvenlikte uzmanlaş ve kendi yol haritanı oluştur!</p>
+
+    <p>AcodeX Academy, yazılım dünyasına adım atmak isteyenler için oluşturulmuş kapsamlı bir eğitim platformudur. Başlangıç seviyesinden ileri seviyeye kadar her seviyedeki öğrenciler için hazırlanmış dersler, projeler, yol haritaları ve kaynaklarla, kendi hızınızda ilerleyerek gerçek dünyada kullanılan teknolojileri öğrenin. Her gün güncellenen eğitim materyalleri,  ve kapsamlı belgelendirme seçenekleri ile başarıya giden yolu kolayca keşfedin. Kendinizi sadece izleyen değil üreten tarafta bulunmak istiyorsanız doğru yerdesiniz</p>
+    <br />
+
+    <a href="@Url.Action("Shop", "Home")" style="text-decoration: none;" class="btn btn-outline-dark" type="button">
+        <i class="fa-solid fa-right-to-bracket"></i> Başla
+    </a>
+    <hr />
+    <div>
+        <div class="p-2 mb-2 bg-body-secondary">
+            <h5 class="text-center">Dokümantasyon</h5>
+        </div>
+        @Html.Action("_DocumentionPartialView", "Home", new { isLimited = true })
+    </div> <br />
+
+    <div>
+        <div class="p-2 mb-2 bg-body-secondary">
+            <h5 class="text-center">Mağaza</h5>
+        </div>
+        <div class="container book">
+            @Html.Action("_ShopPartialView", "Home", new { isLimited = true })
+        </div>
+        <div class="opacity-75 d-flex justify-content-end">
+            <a href="@Url.Action("Shop", "Home")"
+               class="text-danger text-decoration-none">
+                <i class="fa-solid fa-angles-right"></i> Devamını gör
+            </a>
+        </div>
+    </div> <br />
+
+    <div>
+        <div class="p-2 mb-2 bg-body-secondary">
+            <h5 class="text-center">Film - Belgesel</h5>
+        </div>
+        @Html.Action("_FilmPartialViewFilms", "Home", new { isLimited = true })
+        <div class="opacity-75 d-flex justify-content-end">
+            <a href="@Url.Action("Film", "Home")"
+               class="text-danger text-decoration-none">
+                <i class="fa-solid fa-angles-right"></i> Devamını gör
+            </a>
+        </div>
+    </div> <br />
+
+    <div>
+        <div class="p-2 mb-2 bg-body-secondary">
+            <h5 class="text-center">Yol Haritaları</h5>
+        </div>
+        @Html.Action("_PartialViewSource", "RoadMaps", new { isLimited = true })
+        <div class="opacity-75 d-flex justify-content-end">
+            <a href="@Url.Action("Index", "RoadMaps")"
+               class="text-danger text-decoration-none">
+                <i class="fa-solid fa-angles-right"></i> Devamını gör
+            </a>
+        </div>
+    </div> <br />
+
+    <div>
+        <div class="p-2 mb-2 bg-body-secondary">
+            <h5 class="text-center">Kaynaklar</h5>
+        </div>
+        @Html.Action("_SourcePartialView", "Home", new { isLimited = true })
+        <div class="opacity-75 d-flex justify-content-end">
+            <a href="@Url.Action("Source", "Home")"
+               class="text-danger text-decoration-none">
+                <i class="fa-solid fa-angles-right"></i> Devamını gör
+            </a>
+        </div>
+        <br />
+    </div>
+</div>
+

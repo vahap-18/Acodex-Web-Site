@@ -1,0 +1,18 @@
+﻿
+@using AcodexWebSite.Models
+@model List<TblDocumention>
+@{
+    ViewBag.Title = "Documention";
+}
+
+
+<div class="d-grid gap-2">
+    @foreach (var d in Model)
+    {
+        <a href="@d.Link" style="text-decoration: none;" class="btn btn-outline-dark" type="button">
+            @d.Title
+        </a>
+    }
+</div>
+<br>
+

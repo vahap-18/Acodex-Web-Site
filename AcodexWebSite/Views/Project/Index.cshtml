@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4 class="text-center" style="margin-bottom: -40px;">Projeler</h4>
+    <div class="container book">
+        @Html.Action("_PartialProject", "Project")
+    </div>
+</div>

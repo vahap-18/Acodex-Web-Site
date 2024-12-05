@@ -1,0 +1,27 @@
+﻿
+@using AcodexWebSite.Models
+@model List<TblProjects>
+
+
+@foreach (var p in Model)
+{
+    <div class="subBook col">
+        <a href="@p.Link" style="text-decoration: none; color: inherit;">
+            <div class="card mb-3 btn btn-outline-dark" type="button" style="min-width: 20rem;">
+                <div class="card-body text-start">
+                    <h5 class="card-title">@p.Title</h5>
+                    <p class="card-text">
+                        - @p.Description<br />
+                        - @p.Language <br />
+                        - @p.Platform
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <img src="~/Scripts/src/Vahap.jpg" class="img-fluid" style="height: 45px; border-radius: 25px;"
+                             alt="Yazar">
+                        <p class="card-text ms-2"><small>A.Vahap Doğan</small></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+}

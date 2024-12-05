@@ -1,0 +1,22 @@
+﻿@using AcodexWebSite.Models
+@model List<TblRoadMaps>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    @foreach (var image in Model)
+    {
+        if (!string.IsNullOrEmpty(image.Image))
+        {
+            <img src="@Url.Content(image.Image)" class="img-fluid" alt="Yol haritası görseli">
+
+        }
+        else
+        {
+            <p>Görsel yolu geçersiz!</p>
+        }
+    }
+</div>

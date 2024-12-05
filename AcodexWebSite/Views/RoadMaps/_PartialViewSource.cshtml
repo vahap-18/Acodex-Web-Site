@@ -1,0 +1,23 @@
+﻿
+@using AcodexWebSite.Models
+@model List<TblRoadMaps>
+@{
+    string subject = null;
+}
+<div class="d-grid gap-2">
+
+    @foreach (var s in Model)
+    {
+        if (subject != s.Subject)
+        {
+            <br />
+            <h5 class="text-center">@s.Subject</h5>
+            subject = s.Subject;
+        }
+
+        <a href="@Url.Action("Details", "RoadMaps", new { id = s.Id })" style="text-decoration: none;" class="btn btn-outline-dark" type="button">
+            @s.Title
+        </a>
+    }
+</div>
+<br>

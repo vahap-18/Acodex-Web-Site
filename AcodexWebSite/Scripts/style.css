@@ -1,0 +1,71 @@
+.container{
+    padding-top: 56px;;
+}
+
+.nav-link:hover {
+    background-color: rgb(236, 237, 238);
+}
+
+.tab-pane a {
+    display: block;
+    margin-bottom: 10px;
+    flex: 1 1 calc(50% - 10px);
+}
+
+.tab-pane {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab-pane .btn {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .tab-pane a {
+        flex: 1 1 100%;
+    }
+    .subBook .col{
+        flex: 1 1 100% !important;
+        width: 100% !important;
+    }
+}
+
+.book {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.list-group a {
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.list-group a:hover {
+    color: rgb(255, 157, 0);
+    background-color: #c2bcbc; 
+}
+
+.zoom-on-hover {
+    transition: transform 0.3s ease-in-out; 
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.1); 
+    object-fit: cover;
+}
+
+.subBook {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 230px;
+    justify-content: space-between;
+}

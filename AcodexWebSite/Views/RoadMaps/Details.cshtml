@@ -1,0 +1,36 @@
+﻿@using AcodexWebSite.Models
+@model  List<TblRoadMaps>
+
+@{
+    ViewBag.Title = "RoadMaps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model != null && Model.Any())
+{
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="roadmap-item">
+
+                @*if (!string.IsNullOrEmpty(item.Icon))
+                    {
+                        <i class="@item.Icon" style="height:50px; width:50px;"></i>
+                    }*@
+
+                <div class="d-grid gap-2">
+                    <a href="@Url.Action("Image", "RoadMaps", new { id = item.Id })" class="btn btn-outline-warning btn-block" type="button">
+                        Görsel Yol Haritası
+                    </a>
+                </div>
+                <br />
+                @Html.Raw(item.Contents)
+
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p class="text-center">Sayfa bulunamadı</p>
+}
